@@ -223,7 +223,7 @@ const Chat: React.FC = () => {
           <ShoppingBag className="w-6 h-6 text-white" />
         </div>
         <h1 className="text-xl font-bold ml-3 bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
-          Fashion AI Stylist
+          StylerGPT
         </h1>
       </div>
 
