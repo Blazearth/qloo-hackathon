@@ -71,7 +71,7 @@ export async function searchHnMProducts(
         {
           id: 'hm_001',
           name: 'Slim Fit Blazer',
-          price: '3999',
+          price: '3299',
           currency: 'INR',
           url: 'https://www2.hm.com/en_in/productpage.0713986001.html',
           image_url: 'https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F13%2F98%2F1398f8b8c8a9c8c8c8c8c8c8c8c8c8c8c8c8c8c8.jpg%5D&call=url[file:/product/main]',
@@ -125,7 +125,7 @@ export async function searchHnMProducts(
         {
           id: 'hm_001',
           name: 'Slim Fit Blazer',
-          price: '3999',
+          price: '3299',
           currency: 'INR',
           url: 'https://www2.hm.com/en_in/productpage.0713986001.html',
           image_url: 'https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F13%2F98%2F1398f8b8c8a9c8c8c8c8c8c8c8c8c8c8c8c8c8c8.jpg%5D&call=url[file:/product/main]',
