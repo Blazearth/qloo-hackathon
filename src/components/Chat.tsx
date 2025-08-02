@@ -41,7 +41,6 @@ const Chat: React.FC = () => {
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const messagesContainerRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -172,7 +171,7 @@ const Chat: React.FC = () => {
     }
   };
 
-  const formatMessage = (content: string, products?: Product[]) => {
+  const formatMessage = (content: string) => {
     if (!content) return null;
     
     // Split by double newlines to handle paragraphs
@@ -248,7 +247,7 @@ const Chat: React.FC = () => {
               </div>
               
               <div className="whitespace-pre-wrap text-gray-800">
-                {formatMessage(message.content, message.products)}
+                {formatMessage(message.content)}
               </div>
               
               {message.products && message.products.length > 0 && (

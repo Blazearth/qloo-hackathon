@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Star, ShoppingCart, Eye, Loader2, Zap } from 'lucide-react';
+import { ExternalLink, Star, ShoppingCart, Eye, Loader2 } from 'lucide-react';
 
 export interface Product {
   id: string;

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { getQlooSuggestions } from '../lib/qloo';
+
 
 export interface FashionProduct {
   id: string;
@@ -47,16 +47,15 @@ export const searchFashionProducts = async (config: SearchConfig): Promise<Fashi
     if (hmResults.status === 'fulfilled') {
       allProducts = [...allProducts, ...hmResults.value];
     }
-    return await enhanceWithQlooScores(allProducts, { query, maxResults });
+    return await enhanceWithQlooScores(allProducts);
   } catch (error) {
     console.error('Error in fashion search:', error);
     throw new Error('Failed to search for products. Please try again later.');
   }
 };
 
-const enhanceWithQlooScores = async (products: FashionProduct[], context: any): Promise<FashionProduct[]> => {
+const enhanceWithQlooScores = async (products: FashionProduct[]): Promise<FashionProduct[]> => {
   try {
-    const qlooData = await getQlooSuggestions({ query: context.query });
     return products.map(product => ({
       ...product,
       qlooScores: {
